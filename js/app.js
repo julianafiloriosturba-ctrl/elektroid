@@ -107,8 +107,8 @@ function renderizarDepoimentos() {
 document.addEventListener('DOMContentLoaded', () => {
   renderizarGrid('grid-scooters', PRODUTOS.scooters);
   renderizarGrid('grid-triciclos', PRODUTOS.triciclos);
-  renderizarGrid('grid-acessorios', PRODUTOS.acessorios);
-  renderizarGrid('grid-eletronicos', PRODUTOS.eletronicos);
+  renderizarGrid('grid-baterias', PRODUTOS.baterias);
+  renderizarGrid('grid-pecas-acessorios', PRODUTOS.pecasAcessorios);
   renderizarDepoimentos();
 
   // filtro de preço (scooters)
