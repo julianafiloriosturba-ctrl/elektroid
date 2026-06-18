@@ -1,105 +1,213 @@
 /* ============================================
    PRODUTOS — Elektroid
-   Para editar: troque texto, preco_de, preco_por e imagem.
-   Pasta de imagens: assets/produtos/
-   Se "imagem" não existir ainda, o site mostra um placeholder automaticamente.
+   Edite nome, preco_de, preco_por, cores, badge.
+   Imagens: pasta assets/produtos/
    ============================================ */
 
 const PRODUTOS = {
 
   scooters: [
     {
-      nome: "Scooter Urban 500",
-      imagem: "assets/produtos/scooter-urban-500.jpg",
-      potencia: "500W",
-      autonomia: "35 km",
-      preco_de: 6000,
-      preco_por: 4990,
-      badge: "Promoção"
-    },
-    {
-      nome: "Scooter Sport 1000",
-      imagem: "assets/produtos/scooter-sport-1000.jpg",
-      potencia: "1000W",
-      autonomia: "50 km",
-      preco_de: 13000,
-      preco_por: 11000,
-      badge: "Promoção"
-    },
-    {
-      nome: "Scooter Z 1000",
-      imagem: "assets/produtos/scooter-z-1000.jpg",
-      potencia: "1000W",
-      autonomia: "55 km",
-      preco_de: 11500,
-      preco_por: 10000,
+      nome: "Scooter E-350W",
+      modelo: "E-350W",
+      imagem: "assets/produtos/scooter-e-350w.jpg",
+      motor: "350W 48V",
+      autonomia: "23 km",
+      velocidade: "32 km/h",
+      bateria: "48V 8Ah Lítio",
+      freio: "Disco dianteiro e traseiro",
+      cores: ["#1a1a1a", "#f5f5f5"],
+      nomes_cores: ["Preto", "Branco"],
+      preco_de: 0,
+      preco_por: 2999.99,
       badge: ""
     },
     {
-      nome: "Scooter Z Sport 1000",
-      imagem: "assets/produtos/scooter-zs-1000.jpg",
-      potencia: "1000W",
-      autonomia: "50 km",
-      preco_de: 9000,
-      preco_por: 8300,
+      nome: "Scooter E-1000W",
+      modelo: "E-1000W",
+      imagem: "assets/produtos/scooter-e-1000w.jpg",
+      motor: "1000W 60V",
+      autonomia: "65 km",
+      velocidade: "32 km/h",
+      bateria: "60V 20Ah Chumbo",
+      freio: "Tambor dianteiro e traseiro",
+      cores: ["#1b2a4a", "#1a1a1a"],
+      nomes_cores: ["Azul Marinho", "Preto"],
+      preco_de: 0,
+      preco_por: 7999.99,
+      badge: ""
+    },
+    {
+      nome: "Scooter ZM-1000W",
+      modelo: "ZM-1000W",
+      imagem: "assets/produtos/scooter-zm-1000w.jpg",
+      motor: "1000W 60V",
+      autonomia: "65 km",
+      velocidade: "32 km/h",
+      bateria: "60V 20Ah Chumbo",
+      freio: "Tambor dianteiro e traseiro",
+      cores: ["#f4a7c3", "#1b2a4a", "#1a1a1a"],
+      nomes_cores: ["Rosa Bebê", "Azul Marinho", "Preto"],
+      preco_de: 0,
+      preco_por: 7799,
+      badge: ""
+    },
+    {
+      nome: "Patinete Xiaomi Mi Pro 2",
+      modelo: "Mi Pro 2",
+      imagem: "assets/produtos/patinete-xiaomi-mi-pro2.jpg",
+      motor: "300W",
+      autonomia: "45 km",
+      velocidade: "25 km/h",
+      bateria: "12.8Ah Lítio",
+      freio: "E-ABS + disco traseiro",
+      cores: ["#1a1a1a"],
+      nomes_cores: ["Preto"],
+      preco_de: 0,
+      preco_por: 3699,
+      badge: ""
+    },
+    {
+      nome: "Scooter Drift 350W",
+      modelo: "Drift 350W",
+      imagem: "assets/produtos/scooter-drift-350w.jpg",
+      motor: "350W",
+      autonomia: "30 km",
+      velocidade: "32 km/h",
+      bateria: "Lítio",
+      freio: "Disco",
+      cores: ["#cc2200"],
+      nomes_cores: ["Vermelho"],
+      preco_de: 0,
+      preco_por: 1599,
+      badge: "Promoção"
+    },
+    {
+      nome: "Mini Quadriciclo Elétrico 800W",
+      modelo: "Quadriciclo 800W",
+      imagem: "assets/produtos/mini-quadriciclo-800w.jpg",
+      motor: "800W",
+      autonomia: "40 km",
+      velocidade: "40 km/h",
+      bateria: "Lítio",
+      freio: "Disco",
+      cores: ["#e86c00"],
+      nomes_cores: ["Laranja"],
+      preco_de: 0,
+      preco_por: 3999,
       badge: ""
     }
   ],
 
   triciclos: [
     {
-      nome: "Triciclo Cargo XSL 600",
-      imagem: "assets/produtos/triciclo-xsl-600.jpg",
-      potencia: "600W",
+      nome: "Triciclo Elétrico Usado 500W",
+      modelo: "Triciclo 500W",
+      imagem: "assets/produtos/triciclo-usado-500w.jpg",
+      motor: "500W",
       autonomia: "40 km",
-      preco_de: 12000,
-      preco_por: 9900,
-      badge: "Promoção"
+      velocidade: "32 km/h",
+      bateria: "Chumbo",
+      freio: "Tambor",
+      cores: ["#1b2a4a"],
+      nomes_cores: ["Azul"],
+      preco_de: 0,
+      preco_por: 3000,
+      badge: ""
     },
     {
-      nome: "Triciclo Compact KZ 500",
-      imagem: "assets/produtos/triciclo-kz-500.jpg",
-      potencia: "500W",
-      autonomia: "35 km",
-      preco_de: 4500,
-      preco_por: 4000,
-      badge: "Promoção"
+      nome: "Triciclo X3 1000W",
+      modelo: "X3",
+      imagem: "assets/produtos/triciclo-x3.jpg",
+      motor: "1000W 60V",
+      autonomia: "65 km",
+      velocidade: "32 km/h",
+      bateria: "60V 20Ah Chumbo",
+      freio: "Tambor dianteiro e traseiro",
+      cores: [],
+      nomes_cores: [],
+      preco_de: 0,
+      preco_por: 0,
+      badge: "Pré-venda",
+      sem_parcelamento: true,
+      preco_texto: "Consultar"
+    },
+    {
+      nome: "Triciclo Xuanku 1000W",
+      modelo: "Xuanku",
+      imagem: "assets/produtos/triciclo-xuanku.jpg",
+      motor: "1000W 60V",
+      autonomia: "65 km",
+      velocidade: "32 km/h",
+      bateria: "60V 20Ah Chumbo",
+      freio: "Tambor dianteiro e traseiro",
+      cores: [],
+      nomes_cores: [],
+      preco_de: 0,
+      preco_por: 0,
+      badge: "Pré-venda",
+      sem_parcelamento: true,
+      preco_texto: "Consultar"
     }
   ],
 
   baterias: [
     {
       nome: "Bateria de Lítio 48V 20Ah",
+      modelo: "Lítio 48V",
       imagem: "assets/produtos/bateria-litio-48v-20ah.jpg",
-      potencia: "48V · 20Ah",
+      motor: "48V · 20Ah",
       autonomia: "Ciclo de vida longo",
+      velocidade: "",
+      bateria: "Lítio",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
       preco_de: 0,
       preco_por: 1499,
       badge: "Produção própria"
     },
     {
       nome: "Bateria de Lítio 60V 20Ah",
+      modelo: "Lítio 60V",
       imagem: "assets/produtos/bateria-litio-60v-20ah.jpg",
-      potencia: "60V · 20Ah",
+      motor: "60V · 20Ah",
       autonomia: "Ciclo de vida longo",
+      velocidade: "",
+      bateria: "Lítio",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
       preco_de: 0,
       preco_por: 1799,
       badge: "Produção própria"
     },
     {
       nome: "Bateria de Chumbo 48V 12Ah",
+      modelo: "Chumbo 48V",
       imagem: "assets/produtos/bateria-chumbo-48v-12ah.jpg",
-      potencia: "48V · 12Ah",
+      motor: "48V · 12Ah",
       autonomia: "Custo acessível",
+      velocidade: "",
+      bateria: "Chumbo",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
       preco_de: 0,
       preco_por: 599,
       badge: "Produção própria"
     },
     {
       nome: "Bateria de Chumbo 60V 12Ah",
+      modelo: "Chumbo 60V",
       imagem: "assets/produtos/bateria-chumbo-60v-12ah.jpg",
-      potencia: "60V · 12Ah",
+      motor: "60V · 12Ah",
       autonomia: "Custo acessível",
+      velocidade: "",
+      bateria: "Chumbo",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
       preco_de: 0,
       preco_por: 699,
       badge: "Produção própria"
@@ -109,60 +217,65 @@ const PRODUTOS = {
   pecasAcessorios: [
     {
       nome: "Carregador de bateria",
+      modelo: "Carregador",
       imagem: "assets/produtos/carregador-bateria-scooter.jpg",
-      potencia: "Universal",
+      motor: "Universal",
       autonomia: "Carga completa",
+      velocidade: "",
+      bateria: "",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
       preco_de: 0,
       preco_por: 149,
       badge: ""
     },
     {
       nome: "Pneu para scooter elétrica",
+      modelo: "Pneu",
       imagem: "assets/produtos/pneu-scooter.jpg",
-      potencia: "Aro padrão",
+      motor: "Aro padrão",
       autonomia: "Alta durabilidade",
+      velocidade: "",
+      bateria: "",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
       preco_de: 0,
       preco_por: 189,
       badge: ""
     },
     {
       nome: "Motor para scooter elétrica",
+      modelo: "Motor",
       imagem: "assets/produtos/motor-scooter.jpg",
-      potencia: "500W / 1000W",
+      motor: "500W / 1000W",
       autonomia: "Reposição",
+      velocidade: "",
+      bateria: "",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
       preco_de: 0,
       preco_por: 899,
       badge: ""
     },
     {
       nome: "Painel/display de scooter",
+      modelo: "Painel",
       imagem: "assets/produtos/painel-scooter.jpg",
-      potencia: "Digital",
+      motor: "Digital",
       autonomia: "Reposição",
+      velocidade: "",
+      bateria: "",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
       preco_de: 0,
       preco_por: 249,
       badge: ""
-    },
-    {
-      nome: "Espelho retrovisor",
-      imagem: "assets/produtos/espelho-retrovisor.jpg",
-      potencia: "Universal",
-      autonomia: "Par",
-      preco_de: 0,
-      preco_por: 69,
-      badge: ""
-    },
-    {
-      nome: "Banco/assento de scooter",
-      imagem: "assets/produtos/banco-scooter.jpg",
-      potencia: "Universal",
-      autonomia: "Reposição",
-      preco_de: 0,
-      preco_por: 229,
-      badge: ""
     }
   ]
-
 };
 
 const DEPOIMENTOS = [
@@ -170,6 +283,6 @@ const DEPOIMENTOS = [
   { texto: "Produto igual às fotos, entrega no prazo e suporte pós-venda excelente. Totalmente recomendo!", autor: "Ana Paula S." },
   { texto: "Produto incrível! Chegou mais rápido do que esperava. Qualidade impecável, superou todas as expectativas.", autor: "Carlos M." },
   { texto: "Atendimento excelente do início ao fim. A scooter chegou no prazo, bem embalada. Super recomendo!", autor: "Ana Luiza F." },
-  { texto: "Fiquei impressionado com a qualidade da scooter. Vale muito cada centavo. Entrega para o Ceará foi super rápida!", autor: "Roberto S." },
-  { texto: "Melhor compra que fiz esse ano. Suporte pós-venda impecável, sem dúvida respondida na hora.", autor: "Fernanda O." }
+  { texto: "Fiquei impressionado com a qualidade. Vale muito cada centavo. Entrega para o Ceará foi super rápida!", autor: "Roberto S." },
+  { texto: "Melhor compra que fiz esse ano. Suporte pós-venda impecável, toda dúvida respondida na hora.", autor: "Fernanda O." }
 ];
