@@ -12,9 +12,9 @@ function formatarPreco(valor) {
 function calcularParcela(produto) {
   // Se o produto já define um valor de parcela manualmente, usa esse.
   if (produto.parcela_valor) return produto.parcela_valor;
-  // Senão, calcula automaticamente dividindo o preço pelo número de vezes.
-  const vezes = produto.parcelas || 12;
-  return produto.preco_por / vezes;
+  // Regra da loja: "anda a vírgula" — pega o preço e divide por 10.
+  // Ex: R$ 2.999,00 -> 12x de R$ 299,90 | R$ 7.999,00 -> 12x de R$ 799,90
+  return produto.preco_por / 10;
 }
 
 function linkWhatsApp(nomeProduto) {
@@ -69,7 +69,7 @@ function criarCardProduto(produto) {
           <div class="price-block">
             ${temDesconto ? `<span class="price-old">R$ ${formatarPreco(produto.preco_de)}</span>` : ''}
             <span class="price-new">R$ ${formatarPreco(produto.preco_por)}</span>
-            ${produto.sem_parcelamento ? '' : `<span class="price-installment">ou ${produto.parcelas || 12}x de R$ ${formatarPreco(calcularParcela(produto))}</span>`}
+            ${produto.sem_parcelamento ? '' : `<span class="price-installment">ou 12x de R$ ${formatarPreco(calcularParcela(produto))}</span>`}
           </div>
         </div>
         <a class="btn btn-primary btn-full product-cta" href="${linkWhatsApp(produto.nome)}" target="_blank" rel="noopener">
