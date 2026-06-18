@@ -539,6 +539,12 @@ img { display: block; max-width: 100%; }
   font-weight: 600;
   color: var(--green);
 }
+.price-installment {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  letter-spacing: 0.01em;
+}
 .price-block { display: flex; flex-direction: column; gap: 2px; }
 .product-cta {
   margin-top: 16px;
