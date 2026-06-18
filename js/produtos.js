@@ -9,30 +9,30 @@ const PRODUTOS = {
 
   scooters: [
     {
-      nome: "Scooter Urban 500",
+      nome: "Scooter E-350W",
       imagem: "assets/produtos/scooter-urban-500.jpg",
-      potencia: "500W",
+      potencia: "350W",
       autonomia: "35 km",
-      preco_de: 6000,
-      preco_por: 4990,
+      preco_de: 4000,
+      preco_por: 2990,
       badge: "Promoção"
     },
     {
-      nome: "Scooter Sport 1000",
+      nome: "Scooter E-1000W",
       imagem: "assets/produtos/scooter-sport-1000.jpg",
       potencia: "1000W",
-      autonomia: "50 km",
-      preco_de: 13000,
-      preco_por: 11000,
+      autonomia: "45 km",
+      preco_de: 11000,
+      preco_por: 8990,
       badge: "Promoção"
     },
     {
       nome: "Scooter Z 1000",
       imagem: "assets/produtos/scooter-z-1000.jpg",
       potencia: "1000W",
-      autonomia: "55 km",
+      autonomia: "45 km",
       preco_de: 11500,
-      preco_por: 10000,
+      preco_por: 7990,
       badge: ""
     },
     {
