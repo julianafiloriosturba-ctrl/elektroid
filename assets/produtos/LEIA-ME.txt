@@ -1,0 +1,42 @@
+COMO ADICIONAR AS FOTOS DOS PRODUTOS
+======================================
+
+Coloque as fotos nesta pasta (assets/produtos/) usando EXATAMENTE
+os nomes de arquivo abaixo. O site já está programado pra puxar
+essas imagens automaticamente -- nao precisa editar nada no codigo.
+
+Enquanto a foto nao estiver aqui, o card mostra "Foto em breve"
+no lugar, e o site continua funcionando normalmente.
+
+SCOOTERS
+--------
+scooter-urban-500.jpg
+scooter-sport-1000.jpg
+scooter-z-1000.jpg
+scooter-zs-1000.jpg
+
+TRICICLOS
+---------
+triciclo-xsl-600.jpg
+triciclo-kz-500.jpg
+
+ACESSORIOS
+----------
+power-bank-20000.jpg
+capinha-impermeavel.jpg
+carregador-65w.jpg
+garrafa-termica.jpg
+
+ELETRONICOS
+-----------
+smartwatch-fit-pro.jpg
+fone-tws.jpg
+caixa-som.jpg
+camera-instantanea.jpg
+
+DICA: fotos quadradas (1:1), pelo menos 800x800px, fundo neutro
+ou de estudio, dao o melhor resultado visual no card.
+
+Quer adicionar um produto novo? Abra js/produtos.js e copie um
+bloco existente, troque nome/preco/imagem -- o card aparece
+automaticamente no site.
