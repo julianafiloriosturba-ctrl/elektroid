@@ -1,25 +1,30 @@
 /* ============================================
    APP — Elektroid
-   Renderiza produtos e depoimentos a partir de produtos.js
+   Renderiza cards, delega clique pro loja.js
    ============================================ */
-
-const WHATSAPP_NUMERO = "5585999008436";
 
 function formatarPreco(valor) {
   return valor.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function calcularParcela(produto) {
-  // Se o produto já define um valor de parcela manualmente, usa esse.
   if (produto.parcela_valor) return produto.parcela_valor;
-  // Regra da loja: "anda a vírgula" — pega o preço e divide por 10.
-  // Ex: R$ 2.999,00 -> 12x de R$ 299,90 | R$ 7.999,00 -> 12x de R$ 799,90
   return produto.preco_por / 10;
 }
 
-function linkWhatsApp(nomeProduto) {
-  const msg = `Oi! Tenho interesse no ${nomeProduto}, vi no site da Elektroid.`;
-  return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(msg)}`;
+function slugify(s) {
+  return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
+}
+
+function badgeHTML(badge) {
+  if (!badge) return '';
+  const map = {
+    'promocao':      'badge-promocao',
+    'prevenda':      'badge-prevenda',
+    'producaopropria':'badge-producao',
+  };
+  const cls = map[slugify(badge)] || 'badge-default';
+  return `<span class="product-badge ${cls}">${badge}</span>`;
 }
 
 function iconePlaceholder() {
@@ -35,13 +40,26 @@ function iconePlaceholder() {
   `;
 }
 
+// índice global de produtos para o loja.js acessar pelo ID do card
+const PRODUTO_MAP = {};
+
 function criarCardProduto(produto) {
+  const id = 'p-' + slugify(produto.nome);
+  PRODUTO_MAP[id] = produto;
+
   const temDesconto = produto.preco_de && produto.preco_de > produto.preco_por;
+  const precoHTML = produto.preco_texto
+    ? `<span class="price-new consulta">Consultar</span>`
+    : `
+      ${temDesconto ? `<span class="price-old">R$ ${formatarPreco(produto.preco_de)}</span>` : ''}
+      <span class="price-new">R$ ${formatarPreco(produto.preco_por)}</span>
+      ${!produto.sem_parcelamento ? `<span class="price-installment">12x de R$ ${formatarPreco(calcularParcela(produto))} no cartão sem juros</span>` : ''}
+    `;
 
   return `
-    <div class="product-card">
+    <div class="product-card" id="${id}" onclick="abrirProduto(PRODUTO_MAP['${id}'])" style="cursor:pointer">
       <div class="product-media">
-        ${produto.badge ? `<span class="product-badge">${produto.badge}</span>` : ''}
+        ${badgeHTML(produto.badge)}
         <div class="product-placeholder-wrap">${iconePlaceholder()}</div>
         <img
           src="${produto.imagem}"
@@ -56,25 +74,21 @@ function criarCardProduto(produto) {
         <span class="product-cat">Elektroid</span>
         <h3 class="product-name">${produto.nome}</h3>
         <div class="product-specs">
-          <span>
+          ${produto.motor ? `<span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
-            ${produto.potencia}
-          </span>
-          <span>
+            ${produto.motor}
+          </span>` : ''}
+          ${produto.autonomia ? `<span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
             ${produto.autonomia}
-          </span>
+          </span>` : ''}
         </div>
         <div class="product-price-row">
-          <div class="price-block">
-            ${temDesconto ? `<span class="price-old">R$ ${formatarPreco(produto.preco_de)}</span>` : ''}
-            <span class="price-new">R$ ${formatarPreco(produto.preco_por)}</span>
-            ${produto.sem_parcelamento ? '' : `<span class="price-installment">ou 12x de R$ ${formatarPreco(calcularParcela(produto))}</span>`}
-          </div>
+          <div class="price-block">${precoHTML}</div>
         </div>
-        <a class="btn btn-primary btn-full product-cta" href="${linkWhatsApp(produto.nome)}" target="_blank" rel="noopener">
-          Comprar no WhatsApp
-        </a>
+        <div class="product-cta">
+          <div class="btn btn-primary btn-full" style="pointer-events:none">Ver detalhes</div>
+        </div>
       </div>
     </div>
   `;
@@ -87,11 +101,10 @@ function renderizarGrid(idGrid, lista) {
 }
 
 function criarCardDepoimento(d) {
+  const star = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>`;
   return `
     <div class="testimonial-card">
-      <div class="stars">
-        ${'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>'.repeat(5)}
-      </div>
+      <div class="stars">${star.repeat(5)}</div>
       <p>"${d.texto}"</p>
       <div class="testimonial-author">— ${d.autor}</div>
     </div>
@@ -117,18 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
     chip.addEventListener('click', () => {
       chips.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
-
       const texto = chip.textContent.trim();
       let filtrado = PRODUTOS.scooters;
-
-      if (texto === 'Até R$ 5.000') {
-        filtrado = PRODUTOS.scooters.filter(p => p.preco_por <= 5000);
-      } else if (texto === 'Acima de R$ 5.000') {
-        filtrado = PRODUTOS.scooters.filter(p => p.preco_por > 5000);
-      } else if (texto === 'Mais vendidas') {
-        filtrado = [...PRODUTOS.scooters].filter(p => p.badge === 'Promoção');
-      }
-
+      if (texto === 'Até R$ 5.000') filtrado = PRODUTOS.scooters.filter(p => p.preco_por <= 5000);
+      else if (texto === 'Acima de R$ 5.000') filtrado = PRODUTOS.scooters.filter(p => p.preco_por > 5000);
+      else if (texto === 'Mais vendidas') filtrado = PRODUTOS.scooters.filter(p => p.badge === 'Promoção');
       renderizarGrid('grid-scooters', filtrado);
     });
   });
