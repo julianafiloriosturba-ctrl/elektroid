@@ -9,30 +9,30 @@ const PRODUTOS = {
 
   scooters: [
     {
-      nome: "Scooter E-350W",
+      nome: "Scooter Urban 500",
       imagem: "assets/produtos/scooter-urban-500.jpg",
-      potencia: "350W",
+      potencia: "500W",
       autonomia: "35 km",
-      preco_de: 4000,
-      preco_por: 2990,
+      preco_de: 6000,
+      preco_por: 4990,
       badge: "Promoção"
     },
     {
-      nome: "Scooter E-1000W",
+      nome: "Scooter Sport 1000",
       imagem: "assets/produtos/scooter-sport-1000.jpg",
       potencia: "1000W",
-      autonomia: "45 km",
-      preco_de: 11000,
-      preco_por: 8990,
+      autonomia: "50 km",
+      preco_de: 13000,
+      preco_por: 11000,
       badge: "Promoção"
     },
     {
       nome: "Scooter Z 1000",
       imagem: "assets/produtos/scooter-z-1000.jpg",
       potencia: "1000W",
-      autonomia: "45 km",
+      autonomia: "55 km",
       preco_de: 11500,
-      preco_por: 7990,
+      preco_por: 10000,
       badge: ""
     },
     {
@@ -67,81 +67,99 @@ const PRODUTOS = {
     }
   ],
 
-  acessorios: [
+  baterias: [
     {
-      nome: "Power bank 20.000mAh",
-      imagem: "assets/produtos/power-bank-20000.jpg",
-      potencia: "20.000mAh",
-      autonomia: "Carga rápida",
+      nome: "Bateria de Lítio 48V 20Ah",
+      imagem: "assets/produtos/bateria-litio-48v-20ah.jpg",
+      potencia: "48V · 20Ah",
+      autonomia: "Ciclo de vida longo",
+      preco_de: 0,
+      preco_por: 1499,
+      badge: "Produção própria"
+    },
+    {
+      nome: "Bateria de Lítio 60V 20Ah",
+      imagem: "assets/produtos/bateria-litio-60v-20ah.jpg",
+      potencia: "60V · 20Ah",
+      autonomia: "Ciclo de vida longo",
+      preco_de: 0,
+      preco_por: 1799,
+      badge: "Produção própria"
+    },
+    {
+      nome: "Bateria de Chumbo 48V 12Ah",
+      imagem: "assets/produtos/bateria-chumbo-48v-12ah.jpg",
+      potencia: "48V · 12Ah",
+      autonomia: "Custo acessível",
+      preco_de: 0,
+      preco_por: 599,
+      badge: "Produção própria"
+    },
+    {
+      nome: "Bateria de Chumbo 60V 12Ah",
+      imagem: "assets/produtos/bateria-chumbo-60v-12ah.jpg",
+      potencia: "60V · 12Ah",
+      autonomia: "Custo acessível",
+      preco_de: 0,
+      preco_por: 699,
+      badge: "Produção própria"
+    }
+  ],
+
+  pecasAcessorios: [
+    {
+      nome: "Carregador de bateria",
+      imagem: "assets/produtos/carregador-bateria-scooter.jpg",
+      potencia: "Universal",
+      autonomia: "Carga completa",
       preco_de: 0,
       preco_por: 149,
       badge: ""
     },
     {
-      nome: "Capinha à prova d'água",
-      imagem: "assets/produtos/capinha-impermeavel.jpg",
-      potencia: "Universal",
-      autonomia: "Touch sensível",
+      nome: "Pneu para scooter elétrica",
+      imagem: "assets/produtos/pneu-scooter.jpg",
+      potencia: "Aro padrão",
+      autonomia: "Alta durabilidade",
       preco_de: 0,
-      preco_por: 39,
+      preco_por: 189,
       badge: ""
     },
     {
-      nome: "Carregador turbo 65W",
-      imagem: "assets/produtos/carregador-65w.jpg",
-      potencia: "65W",
-      autonomia: "USB-C",
-      preco_de: 119,
-      preco_por: 89,
-      badge: "Promoção"
+      nome: "Motor para scooter elétrica",
+      imagem: "assets/produtos/motor-scooter.jpg",
+      potencia: "500W / 1000W",
+      autonomia: "Reposição",
+      preco_de: 0,
+      preco_por: 899,
+      badge: ""
     },
     {
-      nome: "Garrafa térmica 1L",
-      imagem: "assets/produtos/garrafa-termica.jpg",
-      potencia: "Aço inox",
-      autonomia: "Mantém 12h",
+      nome: "Painel/display de scooter",
+      imagem: "assets/produtos/painel-scooter.jpg",
+      potencia: "Digital",
+      autonomia: "Reposição",
+      preco_de: 0,
+      preco_por: 249,
+      badge: ""
+    },
+    {
+      nome: "Espelho retrovisor",
+      imagem: "assets/produtos/espelho-retrovisor.jpg",
+      potencia: "Universal",
+      autonomia: "Par",
       preco_de: 0,
       preco_por: 69,
       badge: ""
-    }
-  ],
-
-  eletronicos: [
-    {
-      nome: "Smartwatch Fit Pro",
-      imagem: "assets/produtos/smartwatch-fit-pro.jpg",
-      potencia: "Tela AMOLED",
-      autonomia: "7 dias",
-      preco_de: 449,
-      preco_por: 329,
-      badge: "Promoção"
     },
     {
-      nome: "Fone Bluetooth TWS",
-      imagem: "assets/produtos/fone-tws.jpg",
-      potencia: "Cancelamento de ruído",
-      autonomia: "24h",
-      preco_de: 199,
-      preco_por: 139,
-      badge: ""
-    },
-    {
-      nome: "Caixa de som portátil",
-      imagem: "assets/produtos/caixa-som.jpg",
-      potencia: "30W",
-      autonomia: "12h",
+      nome: "Banco/assento de scooter",
+      imagem: "assets/produtos/banco-scooter.jpg",
+      potencia: "Universal",
+      autonomia: "Reposição",
       preco_de: 0,
-      preco_por: 179,
+      preco_por: 229,
       badge: ""
-    },
-    {
-      nome: "Câmera instantânea",
-      imagem: "assets/produtos/camera-instantanea.jpg",
-      potencia: "Impressão na hora",
-      autonomia: "Bateria recarregável",
-      preco_de: 0,
-      preco_por: 299,
-      badge: "Promoção"
     }
   ]
 
