@@ -226,7 +226,7 @@ function abrirCheckout() {
         <div class="pagamento-grid">
           <label class="pagamento-opt"><input type="radio" name="pgto" value="Pix" checked> <span>Pix</span></label>
           <label class="pagamento-opt"><input type="radio" name="pgto" value="Cartão de débito"> <span>Débito</span></label>
-          <label class="pagamento-opt"><input type="radio" name="pgto" value="Cartão de crédito (12x sem juros)"> <span>Crédito 12x</span></label>
+          <label class="pagamento-opt"><input type="radio" name="pgto" value="Cartão de crédito (12x sem juros)"> <span>Crédito 12x<br><small style="color:var(--text-dim);font-size:11px">12x de R$ ${fmt(totalCarrinho() / 10)}</small></span></label>
           <label class="pagamento-opt"><input type="radio" name="pgto" value="Dinheiro"> <span>Dinheiro</span></label>
         </div>
       </div>
@@ -261,6 +261,10 @@ function finalizarPedido() {
   const rua     = document.getElementById('ck-rua').value.trim();
   const obs     = document.getElementById('ck-obs').value.trim();
   const pgto    = document.querySelector('input[name="pgto"]:checked')?.value || 'Não informado';
+  const total   = totalCarrinho();
+  const pgtoTexto = pgto.includes('crédito') || pgto.includes('Crédito')
+    ? `${pgto} — 12x de R$ ${fmt(total / 10)} (com juros do estabelecimento)`
+    : pgto;
 
   if (!nome || !tel || !cidade) {
     alert('Preencha nome, telefone e cidade para continuar.');
@@ -283,8 +287,8 @@ function finalizarPedido() {
     '*Itens:*',
     itensTexto,
     '',
-    `*Total:* R$ ${fmt(totalCarrinho())}`,
-    `*Pagamento:* ${pgto}`,
+    `*Total:* R$ ${fmt(total)}`,
+    `*Pagamento:* ${pgtoTexto}`,
     '',
     '*Entrega:*',
     `Nome: ${nome}`,
