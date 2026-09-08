@@ -448,9 +448,10 @@ img { display: block; max-width: 100%; }
   padding: 5px 10px;
   z-index: 2;
 }
-.product-badge.badge-promocao { background: #e01f1f; color: #fff; }
+.product-badge.badge-promocao  { background: #e01f1f; color: #fff; }
 .product-badge.badge-prevenda  { background: #1a6bcc; color: #fff; }
 .product-badge.badge-producao  { background: var(--green); color: #051a0a; }
+.product-badge.badge-novidade  { background: #7c3aed; color: #fff; }
 .product-badge.badge-default   { background: var(--green); color: #051a0a; }
 
 .product-body {
