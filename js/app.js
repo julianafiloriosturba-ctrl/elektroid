@@ -67,7 +67,12 @@ function criarCardProduto(produto) {
           loading="lazy"
           style="display:none"
           onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
-          onerror="this.remove();"
+          onerror="
+            var alt = this.src.endsWith('.jpg') ? this.src.replace('.jpg','.jpeg') : this.src.replace('.jpeg','.jpg');
+            if (this.dataset.tried) { this.remove(); return; }
+            this.dataset.tried = '1';
+            this.src = alt;
+          "
         >
       </div>
       <div class="product-body">
