@@ -134,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderizarGrid('grid-patinetes', PRODUTOS.patinetes);
   renderizarGrid('grid-offroad', PRODUTOS.offroad);
   renderizarGrid('grid-baterias', PRODUTOS.baterias);
-  renderizarGrid('grid-pecas-acessorios', PRODUTOS.pecasAcessorios);
   renderizarDepoimentos();
 
   // filtro de preço (scooters)
