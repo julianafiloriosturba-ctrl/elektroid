@@ -117,9 +117,9 @@ const PRODUTOS = {
 
   triciclos: [
     {
-      nome: "Elektroid Xuanku",
-      modelo: "Xuanku",
-      imagem: "assets/produtos/elektroid-xuanku.jpg",
+      nome: "Elektroid T1",
+      modelo: "T1",
+      imagem: "assets/produtos/elektroid-xuanku-preta.jpeg",
       motor: "1000W 60V",
       autonomia: "45 km",
       velocidade: "32 km/h",
@@ -128,10 +128,10 @@ const PRODUTOS = {
       cores: ["#1a1a1a", "#cc2200", "#1b2a4a", "#f5f5f5"],
       nomes_cores: ["Preta", "Vermelha", "Azul", "Branca"],
       fotos_cores: [
-        "assets/produtos/elektroid-xuanku-preta.jpg",
-        "assets/produtos/elektroid-xuanku-vermelha.jpg",
-        "assets/produtos/elektroid-xuanku-azul.jpg",
-        "assets/produtos/elektroid-xuanku-branca.jpg"
+        "assets/produtos/elektroid-xuanku-preta.jpeg",
+        "assets/produtos/elektroid-xuanku-vermelha.jpeg",
+        "assets/produtos/elektroid-xuanku-azul.jpeg",
+        "assets/produtos/elektroid-xuanku-branca.jpeg"
       ],
       preco_de: 0,
       preco_por: 8999,

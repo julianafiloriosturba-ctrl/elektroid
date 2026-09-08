@@ -72,9 +72,11 @@ function abrirProduto(produto) {
       </button>
       <div class="modal-inner">
         <div class="modal-img">
-          <img src="${produto.imagem}" alt="${produto.nome}"
-            onerror="this.closest('.modal-img').innerHTML='<div class=modal-img-placeholder>FOTO EM BREVE</div>'"
-          >
+          <img src="${produto.imagem}"
+          alt="${produto.nome}"
+          id="modal-foto-principal"
+          onerror="tentarCarregarFoto(this, this.src.endsWith('.jpg') ? this.src.replace('.jpg','.jpeg') : this.src.replace('.jpeg','.jpg'))"
+        >
           ${produto.badge ? `<span class="product-badge badge-${slugify(produto.badge)}">${produto.badge}</span>` : ''}
         </div>
         <div class="modal-info">
@@ -92,19 +94,34 @@ function abrirProduto(produto) {
   document.body.style.overflow = 'hidden';
 }
 
+function tentarCarregarFoto(imgEl, src) {
+  if (!src) return;
+  imgEl.style.opacity = '0';
+  const img = new Image();
+  img.onload = () => {
+    imgEl.src = src;
+    imgEl.style.opacity = '1';
+  };
+  img.onerror = () => {
+    // tenta a extensão alternativa (.jpg ↔ .jpeg)
+    const alt = src.endsWith('.jpg')
+      ? src.replace(/\.jpg$/, '.jpeg')
+      : src.replace(/\.jpeg$/, '.jpg');
+    const img2 = new Image();
+    img2.onload = () => { imgEl.src = alt; imgEl.style.opacity = '1'; };
+    img2.onerror = () => { imgEl.style.opacity = '1'; }; // mantém a foto atual
+    img2.src = alt;
+  };
+  img.src = src;
+}
+
 function selecionarCor(btn, nome, foto) {
   document.querySelectorAll('.cor-btn').forEach(b => b.classList.remove('ativa'));
   btn.classList.add('ativa');
   document.getElementById('cor-label').textContent = nome;
   if (foto) {
     const img = document.querySelector('#modal-produto .modal-img img');
-    if (img) {
-      img.style.opacity = '0';
-      setTimeout(() => {
-        img.src = foto;
-        img.style.opacity = '1';
-      }, 150);
-    }
+    if (img) tentarCarregarFoto(img, foto);
   }
 }
 
