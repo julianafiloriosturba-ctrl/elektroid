@@ -66,14 +66,17 @@ function criarCardProduto(produto) {
           src="${produto.imagem}"
           alt="${produto.nome}"
           loading="lazy"
-          style="display:none"
-          onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
-          onerror="
-            var alt = this.src.endsWith('.jpg') ? this.src.replace('.jpg','.jpeg') : this.src.replace('.jpeg','.jpg');
-            if (this.dataset.tried) { this.remove(); return; }
-            this.dataset.tried = '1';
-            this.src = alt;
-          "
+          class="product-img"
+          onload="this.classList.add('loaded'); var p=this.parentElement.querySelector('.product-placeholder-wrap'); if(p) p.style.display='none';"
+          onerror="(function(el){
+            if (el.dataset.tried) { el.classList.add('img-error'); return; }
+            el.dataset.tried = '1';
+            var src = el.getAttribute('src');
+            var alt = /\\.jpeg/i.test(src)
+              ? src.replace(/\\.jpeg/i, '.jpg')
+              : src.replace(/\\.jpg/i, '.jpeg');
+            el.src = alt;
+          })(this)"
         >
       </div>
       <div class="product-body">
