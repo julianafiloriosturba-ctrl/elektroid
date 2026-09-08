@@ -296,7 +296,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Chumbo 48V 20Ah",
       modelo: "Chumbo 48V 20Ah",
-      imagem: "assets/produtos/bateria-chumbo-48v-20ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 20Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -312,7 +312,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Chumbo 48V 12Ah",
       modelo: "Chumbo 48V 12Ah",
-      imagem: "assets/produtos/bateria-chumbo-48v-12ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 12Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -328,7 +328,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Chumbo 60V 20Ah",
       modelo: "Chumbo 60V 20Ah",
-      imagem: "assets/produtos/bateria-chumbo-60v-20ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "60V · 20Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -344,7 +344,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Chumbo 60V 12Ah",
       modelo: "Chumbo 60V 12Ah",
-      imagem: "assets/produtos/bateria-chumbo-60v-12ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "60V · 12Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -360,7 +360,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Lítio 48V 8Ah",
       modelo: "Lítio 48V 8Ah",
-      imagem: "assets/produtos/bateria-litio-48v-8ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 8Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -376,7 +376,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Lítio 48V 12Ah",
       modelo: "Lítio 48V 12Ah",
-      imagem: "assets/produtos/bateria-litio-48v-12ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 12Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -392,7 +392,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Lítio 48V 20Ah",
       modelo: "Lítio 48V 20Ah",
-      imagem: "assets/produtos/bateria-litio-48v-20ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 20Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -408,7 +408,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Lítio 60V 20Ah",
       modelo: "Lítio 60V 20Ah",
-      imagem: "assets/produtos/bateria-litio-60v-20ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "60V · 20Ah",
       autonomia: "Sem carregador",
       velocidade: "",
