@@ -34,13 +34,15 @@ function abrirProduto(produto) {
     <div class="modal-cores">
       <div class="modal-cores-label">Cor: <strong id="cor-label">${produto.nomes_cores[0]}</strong></div>
       <div class="cores-list">
-        ${produto.cores.map((c, i) => `
+        ${produto.cores.map((c, i) => {
+          const foto = produto.fotos_cores?.[i] || '';
+          return `
           <button class="cor-btn ${i === 0 ? 'ativa' : ''}"
             style="background:${c}"
             title="${produto.nomes_cores[i]}"
-            onclick="selecionarCor(this, '${produto.nomes_cores[i]}')">
+            onclick="selecionarCor(this, '${produto.nomes_cores[i]}', '${foto}')">
           </button>
-        `).join('')}
+        `}).join('')}
       </div>
     </div>` : '';
 
@@ -90,10 +92,20 @@ function abrirProduto(produto) {
   document.body.style.overflow = 'hidden';
 }
 
-function selecionarCor(btn, nome) {
+function selecionarCor(btn, nome, foto) {
   document.querySelectorAll('.cor-btn').forEach(b => b.classList.remove('ativa'));
   btn.classList.add('ativa');
   document.getElementById('cor-label').textContent = nome;
+  if (foto) {
+    const img = document.querySelector('#modal-produto .modal-img img');
+    if (img) {
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = foto;
+        img.style.opacity = '1';
+      }, 150);
+    }
+  }
 }
 
 function corSelecionada() {

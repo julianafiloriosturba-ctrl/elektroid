@@ -18,6 +18,11 @@ const PRODUTOS = {
       freio: "Disco dianteiro e traseiro",
       cores: ["#1a1a1a", "#f5f5f5", "#e86c00"],
       nomes_cores: ["Preta", "Branca", "Laranja"],
+      fotos_cores: [
+        "assets/produtos/elektroid-fly-preta.jpg",
+        "assets/produtos/elektroid-fly-branca.jpg",
+        "assets/produtos/elektroid-fly-laranja.jpg"
+      ],
       preco_de: 0,
       preco_por: 2399,
       badge: ""
@@ -33,6 +38,12 @@ const PRODUTOS = {
       freio: "Disco dianteiro e traseiro",
       cores: ["#1b2a4a", "#1a1a1a", "#f5f5f5", "#cc2200"],
       nomes_cores: ["Azul", "Preta", "Branca", "Vermelha"],
+      fotos_cores: [
+        "assets/produtos/elektroid-jy-azul.jpg",
+        "assets/produtos/elektroid-jy-preta.jpg",
+        "assets/produtos/elektroid-jy-branca.jpg",
+        "assets/produtos/elektroid-jy-vermelha.jpg"
+      ],
       preco_de: 0,
       preco_por: 2999,
       badge: ""
@@ -48,6 +59,11 @@ const PRODUTOS = {
       freio: "Disco dianteiro e traseiro",
       cores: ["#cc2200", "#1b2a4a", "#f5f5f5"],
       nomes_cores: ["Vermelho", "Azul", "Branco"],
+      fotos_cores: [
+        "assets/produtos/elektroid-es05-vermelho.jpg",
+        "assets/produtos/elektroid-es05-azul.jpg",
+        "assets/produtos/elektroid-es05-branco.jpg"
+      ],
       preco_de: 0,
       preco_por: 5999,
       badge: ""
@@ -111,6 +127,12 @@ const PRODUTOS = {
       freio: "Disco dianteiro e traseiro",
       cores: ["#1a1a1a", "#cc2200", "#1b2a4a", "#f5f5f5"],
       nomes_cores: ["Preta", "Vermelha", "Azul", "Branca"],
+      fotos_cores: [
+        "assets/produtos/elektroid-xuanku-preta.jpg",
+        "assets/produtos/elektroid-xuanku-vermelha.jpg",
+        "assets/produtos/elektroid-xuanku-azul.jpg",
+        "assets/produtos/elektroid-xuanku-branca.jpg"
+      ],
       preco_de: 0,
       preco_por: 8999,
       badge: ""
@@ -126,6 +148,12 @@ const PRODUTOS = {
       freio: "Disco dianteiro e traseiro",
       cores: ["#cc2200", "#1b2a4a", "#1a1a1a", "#f5f5f5"],
       nomes_cores: ["Vermelho", "Azul", "Preto", "Branco"],
+      fotos_cores: [
+        "assets/produtos/elektroid-x3-vermelho.jpg",
+        "assets/produtos/elektroid-x3-azul.jpg",
+        "assets/produtos/elektroid-x3-preto.jpg",
+        "assets/produtos/elektroid-x3-branco.jpg"
+      ],
       preco_de: 0,
       preco_por: 9499,
       badge: ""
