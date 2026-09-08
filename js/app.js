@@ -19,9 +19,10 @@ function slugify(s) {
 function badgeHTML(badge) {
   if (!badge) return '';
   const map = {
-    'promocao':      'badge-promocao',
-    'prevenda':      'badge-prevenda',
-    'producaopropria':'badge-producao',
+    'promocao':        'badge-promocao',
+    'prevenda':        'badge-prevenda',
+    'producaopropria': 'badge-producao',
+    'novidade':        'badge-novidade',
   };
   const cls = map[slugify(badge)] || 'badge-default';
   return `<span class="product-badge ${cls}">${badge}</span>`;
@@ -123,8 +124,12 @@ function renderizarDepoimentos() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  renderizarGrid('grid-novidades', PRODUTOS.novidades);
+  renderizarGrid('grid-bikes', PRODUTOS.bikes);
   renderizarGrid('grid-scooters', PRODUTOS.scooters);
   renderizarGrid('grid-triciclos', PRODUTOS.triciclos);
+  renderizarGrid('grid-patinetes', PRODUTOS.patinetes);
+  renderizarGrid('grid-offroad', PRODUTOS.offroad);
   renderizarGrid('grid-baterias', PRODUTOS.baterias);
   renderizarGrid('grid-pecas-acessorios', PRODUTOS.pecasAcessorios);
   renderizarDepoimentos();
