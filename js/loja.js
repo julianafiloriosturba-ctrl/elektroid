@@ -55,7 +55,11 @@ function abrirProduto(produto) {
   `;
 
   const botaoHTML = produto.preco_texto ? `
-    <a class="btn btn-primary btn-full" href="https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent('Oi! Tenho interesse no ' + produto.nome + ' (pré-venda). Quando chega?')}" target="_blank">
+    <a class="btn btn-primary btn-full" href="https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(
+      produto.modelo === 'Peças' || produto.modelo === 'Carregador' || produto.modelo === 'Pneu' || produto.modelo === 'Motor' || produto.modelo === 'Display'
+        ? 'Oi! Preciso de uma peça: ' + produto.nome + '. Vou enviar a foto para consulta.'
+        : 'Oi! Tenho interesse no ' + produto.nome + ' (pré-venda). Quando chega?'
+    )}" target="_blank">
       Consultar no WhatsApp
     </a>
   ` : `
@@ -311,6 +315,8 @@ function finalizarPedido() {
   const enderecoTexto = [cidade, bairro, rua].filter(Boolean).join(', ');
 
   const msg = [
+    '📱 *PEDIDO VIA SITE — comissão diferenciada*',
+    '─────────────────────────',
     '🛵 *Novo pedido — Elektroid*',
     '',
     '*Itens:*',
