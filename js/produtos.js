@@ -43,7 +43,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-jy-vermelha.jpg"
       ],
       preco_de: 0,
-      preco_por: 2999,
+      preco_por: 3000,
       badge: "Novidade"
     },
     {
@@ -63,7 +63,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-es05-branco.jpg"
       ],
       preco_de: 0,
-      preco_por: 5999,
+      preco_por: 5200,
       badge: "Novidade"
     },
     {
@@ -84,7 +84,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-xuanku-branca.jpeg"
       ],
       preco_de: 0,
-      preco_por: 8999,
+      preco_por: 9500,
       badge: "Novidade"
     },
     {
@@ -105,7 +105,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-x3-branco.jpg"
       ],
       preco_de: 0,
-      preco_por: 9499,
+      preco_por: 8999,
       badge: "Novidade"
     }
   ],
@@ -152,7 +152,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-jy-vermelha.jpg"
       ],
       preco_de: 0,
-      preco_por: 2999,
+      preco_por: 3000,
       badge: ""
     },
     {
@@ -172,7 +172,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-es05-branco.jpg"
       ],
       preco_de: 0,
-      preco_por: 5999,
+      preco_por: 5200,
       badge: ""
     },
     {
@@ -212,7 +212,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-xuanku-branca.jpeg"
       ],
       preco_de: 0,
-      preco_por: 8999,
+      preco_por: 9500,
       badge: ""
     },
     {
@@ -233,7 +233,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-x3-branco.jpg"
       ],
       preco_de: 0,
-      preco_por: 9499,
+      preco_por: 8999,
       badge: ""
     },
     {
@@ -425,11 +425,11 @@ const PRODUTOS = {
 
   pecasAcessorios: [
     {
-      nome: "Carregador de bateria",
+      nome: "Carregador de Bateria",
       modelo: "Carregador",
-      imagem: "assets/produtos/carregador-bateria-scooter.jpg",
-      motor: "Universal",
-      autonomia: "Carga completa",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "A partir de R$ 249",
+      autonomia: "Consulte o modelo",
       velocidade: "",
       bateria: "",
       freio: "",
@@ -437,15 +437,17 @@ const PRODUTOS = {
       nomes_cores: [],
       fotos_cores: [],
       preco_de: 0,
-      preco_por: 149,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
       badge: ""
     },
     {
-      nome: "Pneu para scooter elétrica",
+      nome: "Pneu para Scooter",
       modelo: "Pneu",
-      imagem: "assets/produtos/pneu-scooter.jpg",
-      motor: "Aro padrão",
-      autonomia: "Alta durabilidade",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "A partir de R$ 249",
+      autonomia: "Consulte o modelo",
       velocidade: "",
       bateria: "",
       freio: "",
@@ -453,15 +455,17 @@ const PRODUTOS = {
       nomes_cores: [],
       fotos_cores: [],
       preco_de: 0,
-      preco_por: 189,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
       badge: ""
     },
     {
-      nome: "Motor para scooter elétrica",
+      nome: "Motor Elétrico",
       modelo: "Motor",
-      imagem: "assets/produtos/motor-scooter.jpg",
-      motor: "500W / 1000W",
-      autonomia: "Reposição",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "A partir de R$ 1.599",
+      autonomia: "Consulte o modelo",
       velocidade: "",
       bateria: "",
       freio: "",
@@ -469,15 +473,17 @@ const PRODUTOS = {
       nomes_cores: [],
       fotos_cores: [],
       preco_de: 0,
-      preco_por: 899,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
       badge: ""
     },
     {
-      nome: "Painel/display de scooter",
-      modelo: "Painel",
-      imagem: "assets/produtos/painel-scooter.jpg",
-      motor: "Digital",
-      autonomia: "Reposição",
+      nome: "Display / Painel",
+      modelo: "Display",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "A partir de R$ 900",
+      autonomia: "Consulte o modelo",
       velocidade: "",
       bateria: "",
       freio: "",
@@ -485,7 +491,27 @@ const PRODUTOS = {
       nomes_cores: [],
       fotos_cores: [],
       preco_de: 0,
-      preco_por: 249,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
+      badge: ""
+    },
+    {
+      nome: "Outras Peças",
+      modelo: "Peças",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "Envie foto da peça",
+      autonomia: "Consulte disponibilidade",
+      velocidade: "",
+      bateria: "",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
+      fotos_cores: [],
+      preco_de: 0,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
       badge: ""
     }
   ]
