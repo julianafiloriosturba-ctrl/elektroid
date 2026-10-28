@@ -22,7 +22,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-fly-laranja.jpg"
       ],
       preco_de: 0,
-      preco_por: 2399,
+      preco_por: 2799,
       badge: "Novidade"
     },
     {
@@ -128,7 +128,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-fly-laranja.jpg"
       ],
       preco_de: 0,
-      preco_por: 2399,
+      preco_por: 2799,
       badge: ""
     }
   ],
