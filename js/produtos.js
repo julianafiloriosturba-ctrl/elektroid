@@ -22,8 +22,9 @@ const PRODUTOS = {
         "assets/produtos/elektroid-fly-laranja.jpg"
       ],
       preco_de: 0,
-      preco_por: 2799,
-      badge: "Novidade"
+      preco_por: 2399,
+      previsao_entrega: "Entrega em até 20 dias",
+      badge: "Pré-venda"
     },
     {
       nome: "Elektroid JY",
@@ -44,7 +45,7 @@ const PRODUTOS = {
       ],
       preco_de: 0,
       preco_por: 3000,
-      badge: "Novidade"
+      badge: "Esgotado"
     },
     {
       nome: "Elektroid ES05",
@@ -84,7 +85,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-xuanku-branca.jpeg"
       ],
       preco_de: 0,
-      preco_por: 9500,
+      preco_por: 8999,
       badge: "Novidade"
     },
     {
@@ -105,7 +106,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-x3-branco.jpg"
       ],
       preco_de: 0,
-      preco_por: 8999,
+      preco_por: 9499,
       badge: "Novidade"
     }
   ],
@@ -128,8 +129,9 @@ const PRODUTOS = {
         "assets/produtos/elektroid-fly-laranja.jpg"
       ],
       preco_de: 0,
-      preco_por: 2799,
-      badge: ""
+      preco_por: 2399,
+      previsao_entrega: "Entrega em até 20 dias",
+      badge: "Pré-venda"
     }
   ],
 
@@ -153,7 +155,7 @@ const PRODUTOS = {
       ],
       preco_de: 0,
       preco_por: 3000,
-      badge: ""
+      badge: "Esgotado"
     },
     {
       nome: "Elektroid ES05",
@@ -212,7 +214,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-xuanku-branca.jpeg"
       ],
       preco_de: 0,
-      preco_por: 9500,
+      preco_por: 8999,
       badge: ""
     },
     {
@@ -233,7 +235,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-x3-branco.jpg"
       ],
       preco_de: 0,
-      preco_por: 8999,
+      preco_por: 9499,
       badge: ""
     },
     {

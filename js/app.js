@@ -23,6 +23,7 @@ function badgeHTML(badge) {
     'prevenda':        'badge-prevenda',
     'producaopropria': 'badge-producao',
     'novidade':        'badge-novidade',
+    'esgotado':        'badge-esgotado',
   };
   const cls = map[slugify(badge)] || 'badge-default';
   return `<span class="product-badge ${cls}">${badge}</span>`;
@@ -55,6 +56,7 @@ function criarCardProduto(produto) {
       ${temDesconto ? `<span class="price-old">R$ ${formatarPreco(produto.preco_de)}</span>` : ''}
       <span class="price-new">R$ ${formatarPreco(produto.preco_por)}</span>
       ${!produto.sem_parcelamento ? `<span class="price-installment">12x de R$ ${formatarPreco(calcularParcela(produto))} no cartão sem juros</span>` : ''}
+      ${produto.previsao_entrega ? `<span class="price-entrega">🚚 ${produto.previsao_entrega}</span>` : ''}
     `;
 
   return `
