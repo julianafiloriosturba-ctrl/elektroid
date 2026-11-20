@@ -25,6 +25,7 @@ function badgeHTML(badge) {
     'novidade':        'badge-novidade',
     'esgotado':        'badge-esgotado',
     'blackfriday':     'badge-blackfriday',
+    'esquentablackfriday': 'badge-blackfriday',
   };
   const cls = map[slugify(badge)] || 'badge-default';
   return `<span class="product-badge ${cls}">${badge}</span>`;
