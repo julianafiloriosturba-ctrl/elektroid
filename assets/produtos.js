@@ -21,9 +21,9 @@ const PRODUTOS = {
         "assets/produtos/elektroid-fly-branca.jpg",
         "assets/produtos/elektroid-fly-laranja.jpg"
       ],
-      preco_de: 4999,
+      preco_de: 4500,
       preco_por: 2999,
-      badge: "Black Friday"
+      badge: "🔥 Esquenta Black Friday"
     },
     {
       nome: "Elektroid JY",
@@ -127,9 +127,9 @@ const PRODUTOS = {
         "assets/produtos/elektroid-fly-branca.jpg",
         "assets/produtos/elektroid-fly-laranja.jpg"
       ],
-      preco_de: 4999,
+      preco_de: 4500,
       preco_por: 2999,
-      badge: "Black Friday"
+      badge: "🔥 Esquenta Black Friday"
     }
   ],
 
