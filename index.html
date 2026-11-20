@@ -74,7 +74,7 @@
   <div class="bf-banner-inner">
     <div>
       <div class="bf-title">⚡ Black Friday Elektroid</div>
-      <div class="bf-subtitle">Ofertas especiais · 21 de novembro</div>
+      <div class="bf-subtitle">Ofertas até 27 de novembro · Aproveite!</div>
     </div>
     <div class="bf-countdown" id="bf-countdown">
       <div class="bf-unit"><span class="bf-unit-num" id="bf-d">00</span><span class="bf-unit-label">dias</span></div>
@@ -93,15 +93,16 @@
 </div>
 <script>
 (function(){
-  // Black Friday: 21 Nov 2026 00:00 horário de Fortaleza (UTC-3)
-  var fim = new Date('2026-11-21T03:00:00Z').getTime();
+  // Black Friday: encerra 27 Nov 2026 23:59 horário de Fortaleza (UTC-3)
+  var fim = new Date('2026-11-28T02:59:59Z').getTime();
   function atualizar(){
     var agora = Date.now();
     var diff = fim - agora;
     var banner = document.getElementById('bf-banner');
     if(diff <= 0){
       // Quando chegar o dia, troca texto para "Hoje é o dia!"
-      document.getElementById('bf-countdown').innerHTML = '<span style="font-family:var(--font-head);color:#f5c518;font-size:20px;font-weight:700;">🔥 Hoje é o dia! Aproveite!</span>';
+      document.getElementById('bf-countdown').innerHTML = '<span style="font-family:var(--font-head);color:#f5c518;font-size:20px;font-weight:700;">⏰ Oferta encerrada</span>';
+      document.getElementById('bf-banner').style.display = 'none';
       return;
     }
     var d = Math.floor(diff/86400000);
