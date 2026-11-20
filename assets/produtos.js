@@ -21,9 +21,9 @@ const PRODUTOS = {
         "assets/produtos/elektroid-fly-branca.jpg",
         "assets/produtos/elektroid-fly-laranja.jpg"
       ],
-      preco_de: 0,
-      preco_por: 2399,
-      badge: "Novidade"
+      preco_de: 4999,
+      preco_por: 2999,
+      badge: "Black Friday"
     },
     {
       nome: "Elektroid JY",
@@ -43,8 +43,8 @@ const PRODUTOS = {
         "assets/produtos/elektroid-jy-vermelha.jpg"
       ],
       preco_de: 0,
-      preco_por: 2999,
-      badge: "Novidade"
+      preco_por: 3000,
+      badge: "Esgotado"
     },
     {
       nome: "Elektroid ES05",
@@ -63,7 +63,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-es05-branco.jpg"
       ],
       preco_de: 0,
-      preco_por: 5999,
+      preco_por: 5200,
       badge: "Novidade"
     },
     {
@@ -127,9 +127,9 @@ const PRODUTOS = {
         "assets/produtos/elektroid-fly-branca.jpg",
         "assets/produtos/elektroid-fly-laranja.jpg"
       ],
-      preco_de: 0,
-      preco_por: 2399,
-      badge: ""
+      preco_de: 4999,
+      preco_por: 2999,
+      badge: "Black Friday"
     }
   ],
 
@@ -152,8 +152,8 @@ const PRODUTOS = {
         "assets/produtos/elektroid-jy-vermelha.jpg"
       ],
       preco_de: 0,
-      preco_por: 2999,
-      badge: ""
+      preco_por: 3000,
+      badge: "Esgotado"
     },
     {
       nome: "Elektroid ES05",
@@ -172,7 +172,7 @@ const PRODUTOS = {
         "assets/produtos/elektroid-es05-branco.jpg"
       ],
       preco_de: 0,
-      preco_por: 5999,
+      preco_por: 5200,
       badge: ""
     },
     {
@@ -296,7 +296,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Chumbo 48V 20Ah",
       modelo: "Chumbo 48V 20Ah",
-      imagem: "assets/produtos/bateria-chumbo-48v-20ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 20Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -312,7 +312,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Chumbo 48V 12Ah",
       modelo: "Chumbo 48V 12Ah",
-      imagem: "assets/produtos/bateria-chumbo-48v-12ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 12Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -328,7 +328,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Chumbo 60V 20Ah",
       modelo: "Chumbo 60V 20Ah",
-      imagem: "assets/produtos/bateria-chumbo-60v-20ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "60V · 20Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -344,7 +344,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Chumbo 60V 12Ah",
       modelo: "Chumbo 60V 12Ah",
-      imagem: "assets/produtos/bateria-chumbo-60v-12ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "60V · 12Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -360,7 +360,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Lítio 48V 8Ah",
       modelo: "Lítio 48V 8Ah",
-      imagem: "assets/produtos/bateria-litio-48v-8ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 8Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -376,7 +376,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Lítio 48V 12Ah",
       modelo: "Lítio 48V 12Ah",
-      imagem: "assets/produtos/bateria-litio-48v-12ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 12Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -392,7 +392,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Lítio 48V 20Ah",
       modelo: "Lítio 48V 20Ah",
-      imagem: "assets/produtos/bateria-litio-48v-20ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "48V · 20Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -408,7 +408,7 @@ const PRODUTOS = {
     {
       nome: "Bateria Lítio 60V 20Ah",
       modelo: "Lítio 60V 20Ah",
-      imagem: "assets/produtos/bateria-litio-60v-20ah.jpg",
+      imagem: "assets/produtos/bateria.jpg",
       motor: "60V · 20Ah",
       autonomia: "Sem carregador",
       velocidade: "",
@@ -425,11 +425,11 @@ const PRODUTOS = {
 
   pecasAcessorios: [
     {
-      nome: "Carregador de bateria",
+      nome: "Carregador de Bateria",
       modelo: "Carregador",
-      imagem: "assets/produtos/carregador-bateria-scooter.jpg",
-      motor: "Universal",
-      autonomia: "Carga completa",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "A partir de R$ 249",
+      autonomia: "Consulte o modelo",
       velocidade: "",
       bateria: "",
       freio: "",
@@ -437,15 +437,17 @@ const PRODUTOS = {
       nomes_cores: [],
       fotos_cores: [],
       preco_de: 0,
-      preco_por: 149,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
       badge: ""
     },
     {
-      nome: "Pneu para scooter elétrica",
+      nome: "Pneu para Scooter",
       modelo: "Pneu",
-      imagem: "assets/produtos/pneu-scooter.jpg",
-      motor: "Aro padrão",
-      autonomia: "Alta durabilidade",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "A partir de R$ 249",
+      autonomia: "Consulte o modelo",
       velocidade: "",
       bateria: "",
       freio: "",
@@ -453,15 +455,17 @@ const PRODUTOS = {
       nomes_cores: [],
       fotos_cores: [],
       preco_de: 0,
-      preco_por: 189,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
       badge: ""
     },
     {
-      nome: "Motor para scooter elétrica",
+      nome: "Motor Elétrico",
       modelo: "Motor",
-      imagem: "assets/produtos/motor-scooter.jpg",
-      motor: "500W / 1000W",
-      autonomia: "Reposição",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "A partir de R$ 1.599",
+      autonomia: "Consulte o modelo",
       velocidade: "",
       bateria: "",
       freio: "",
@@ -469,15 +473,17 @@ const PRODUTOS = {
       nomes_cores: [],
       fotos_cores: [],
       preco_de: 0,
-      preco_por: 899,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
       badge: ""
     },
     {
-      nome: "Painel/display de scooter",
-      modelo: "Painel",
-      imagem: "assets/produtos/painel-scooter.jpg",
-      motor: "Digital",
-      autonomia: "Reposição",
+      nome: "Display / Painel",
+      modelo: "Display",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "A partir de R$ 900",
+      autonomia: "Consulte o modelo",
       velocidade: "",
       bateria: "",
       freio: "",
@@ -485,7 +491,27 @@ const PRODUTOS = {
       nomes_cores: [],
       fotos_cores: [],
       preco_de: 0,
-      preco_por: 249,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
+      badge: ""
+    },
+    {
+      nome: "Outras Peças",
+      modelo: "Peças",
+      imagem: "assets/produtos/pecas.jpg",
+      motor: "Envie foto da peça",
+      autonomia: "Consulte disponibilidade",
+      velocidade: "",
+      bateria: "",
+      freio: "",
+      cores: [],
+      nomes_cores: [],
+      fotos_cores: [],
+      preco_de: 0,
+      preco_por: 0,
+      preco_texto: "Consultar",
+      sem_parcelamento: true,
       badge: ""
     }
   ]
