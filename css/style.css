@@ -457,7 +457,7 @@ img { display: block; max-width: 100%; }
 .product-badge.badge-producao  { background: var(--green); color: #051a0a; }
 .product-badge.badge-novidade  { background: #7c3aed; color: #fff; }
 .product-badge.badge-esgotado   { background: #555; color: #fff; }
-.product-badge.badge-blackfriday { background: #000; color: #f5c518; border: 1px solid #f5c518; }
+.product-badge.badge-blackfriday { background: #e86c00; color: #fff; border: none; font-weight: 700; }
 .product-badge.badge-default    { background: var(--green); color: #051a0a; }
 
 /* ============ BANNER BLACK FRIDAY ============ */
